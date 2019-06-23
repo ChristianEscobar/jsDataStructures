@@ -100,17 +100,6 @@ class LinkedList {
 		}
 	}
 
-	print() {
-		const display = [];
-		let temp = this.head;
-		while (temp) {
-			display.push(temp.data);
-			temp = temp.next;
-		}
-
-		console.log(display);
-	}
-
 	size() {
 		let total = 0;
 		let temp = this.head;
@@ -120,6 +109,17 @@ class LinkedList {
 		}
 
 		return total;
+	}
+
+	print() {
+		const display = [];
+		let temp = this.head;
+		while (temp) {
+			display.push(temp.data);
+			temp = temp.next;
+		}
+
+		console.log(display);
 	}
 }
 

@@ -77,6 +77,27 @@ class LinkedList {
 		return null;
 	}
 
+	getFirst() {
+		if (this.head) {
+			return this.head.data;
+		}
+
+		return null;
+	}
+
+	getLast() {
+		if (!this.head) {
+			return null;
+		}
+
+		let temp = this.head;
+		while (temp.next) {
+			temp = temp.next;
+		}
+
+		return temp.data;
+	}
+
 	remove(data) {
 		if (!this.head) {
 			return null;
@@ -100,6 +121,28 @@ class LinkedList {
 		}
 	}
 
+	reverse() {
+		if (!this.head) {
+			return null;
+		}
+
+		let cur = this.head;
+		let prev = null;
+		let reverseHead = null;
+		let lastNodeInReverse = null;
+		while (cur) {
+			const node = new Node(cur.data);
+			node.next = lastNodeInReverse;
+			lastNodeInReverse = node;
+			reverseHead = lastNodeInReverse;
+
+			prev = cur;
+			cur = cur.next;
+		}
+
+		this.head = reverseHead;
+	}
+
 	size() {
 		let total = 0;
 		let temp = this.head;
@@ -109,6 +152,18 @@ class LinkedList {
 		}
 
 		return total;
+	}
+
+	toArray() {
+		const listArray = [];
+
+		let temp = this.head;
+		while (temp) {
+			listArray.push(temp.data);
+			temp = temp.next;
+		}
+
+		return listArray;
 	}
 
 	print() {

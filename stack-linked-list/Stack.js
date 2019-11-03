@@ -1,4 +1,4 @@
-const DoubleNode = require('../data-nodes/SingleNode');
+const SingleNode = require('../data-nodes/SingleNode');
 
 class Stack {
 	constructor() {
@@ -6,11 +6,10 @@ class Stack {
 	}
 
 	push(data) {
-		const newNode = new DoubleNode(data);
+		const newNode = new SingleNode(data);
 		if (!this.top) {
 			this.top = newNode;
 		} else {
-			// this.top.prev = newNode;
 			newNode.next = this.top;
 			this.top = newNode;
 		}

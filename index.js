@@ -18,9 +18,9 @@ stack.pop();
 stack.pop();
 stack.pop();
 stack.pop();
-stack.pop();
-stack.pop();
-stack.pop();
+//stack.pop();
+//stack.pop();
+//stack.pop();
 console.log(stack.peek());
 
 // const bst = new Bst();

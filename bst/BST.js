@@ -29,7 +29,7 @@ class Bst {
 		};
 
 		if (!this.root) {
-			const node = new Node(data);
+			const node = new Node(data, null, null);
 			this.root = node;
 		} else {
 			traverse(data, this.root);

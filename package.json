@@ -4,6 +4,8 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
+		"run-bst": "node bst/index.js",
+		"test-bst": "jest bst.test.js",
 		"test": "jest"
 	},
 	"author": "",

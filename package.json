@@ -1,5 +1,5 @@
 {
-	"name": "data-structures",
+	"name": "js-data-structures",
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.js",
@@ -12,6 +12,9 @@
 	"license": "ISC",
 	"dependencies": {},
 	"devDependencies": {
+		"eslint": "^7.24.0",
+		"eslint-config-airbnb-base": "^14.2.1",
+		"eslint-plugin-import": "^2.22.1",
 		"jest": "^24.9.0"
 	}
 }
